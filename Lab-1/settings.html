@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settings</title>
+    <link rel="stylesheet" href="settings.css">
+    <style>
+        body {
+            background-color: rgb(255, 255, 255);
+            box-sizing: border-box;
+        }
+
+        table,
+        th,
+        td {
+            border: 1px solid;
+            border-collapse: collapse;
+        }
+
+        th,
+        td {
+            padding: 1vw;
+        }
+
+        .table {
+            display: flex;
+            justify-content: center;
+        }
+    </style>
+</head>
+
+<body id="body">
+    <div class="container">
+        <div class="form" id="setting-form">
+            <p class="text-center" style="font-size: 2em; font-weight:600">Settings</p>
+            <form onsubmit="return false">
+                <a href="index.html" id="back">Back</a>
+                <div class="mt">
+                    <label for="color">Background Color</label>
+                    <input type="color" name="" id="bgcolor" onchange="setColor()" style="height: 2em;">
+                </div>
+
+                <br>
+                <div class="mt">
+                    <label for="color">Form Theme</label>
+                    <select name="" id="backImg" onchange="backImage()">
+                        <option value="url(images/blur.jpg)">blur</option>
+                        <option value="url(images/light.jpg)">light</option>
+                        <option value="url(images/gradient.jpg)">gradient</option>
+                    </select>
+                </div>
+                <h3>Get Cookies</h3>
+                <button onclick="getCookie()">Get Cookie</button>
+                <div class="table">
+                    <table class="mt" id="table"></table>
+                </div>
+                <h3>Set Cookies</h3>
+                <div class="mt">
+                    <label for="">Cookie Name</label>
+                    <input type="text" name="cookie-name" id="cookie-name">
+                </div>
+                <div class="mt">
+                    <label for="">Cookie Value</label>
+                    <input type="text" name="cookie-value" id="cookie-value">
+                </div>
+                <button onclick="setCookie()" class="mt">Set Cookie</button>
+
+                <h3>Delete Cookies</h3>
+                <select id="cookie-select">
+                </select>
+                <button onclick="deleteCookie()" class="mt">Delete Cookie</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        var cookies = document.cookie;
+
+        function setColor() {
+            var someTime = "Thu, 22 Dec 2022 12:00:00 UTC"
+            var bgColor = document.getElementById('bgcolor').value;
+            document.cookie = 'BgColor=' + bgColor + ";expires=" + someTime + ";path=/;"
+        }
+        function backImage() {
+            var someTime = "Thu, 22 Dec 2022 12:00:00 UTC"
+            var bgImg = document.getElementById('backImg').value
+            document.cookie = "BackImg=" + bgImg + ";expires=" + someTime + ";path=/;"
+        }
+
+        const cookieSelect = document.getElementById('cookie-select')
+        window.onload = function () {
+            var cookiesList = document.cookie.split(";")
+            for (i = 0; i < cookiesList.length; i++) {
+                if (cookiesList[i].match(/\bBgColor=/)) {
+                    var bgCookie = cookiesList[i]
+                    var bgCookiesList = bgCookie.split("=")
+                    var bgCookieValue = bgCookiesList[1];
+                    var bgcolor = document.getElementById('bgcolor')
+                    bgcolor.value = bgCookieValue;
+                }
+                if (cookiesList[i].match(/\bBackImg=/)) {
+                    var bgImgCookie = cookiesList[i]
+                    var bgImgCookiesList = bgImgCookie.split("=")
+                    var bgImgCookieValue = bgImgCookiesList[1];
+                    var bgImg = document.getElementById('backImg')
+                    bgImg.value = bgImgCookieValue;
+                }
+            }
+            var cookiesList = document.cookie.split(";")
+            var opt = "<option disabled selected value=''>Choose</option>"
+            for (i = 0; i < cookiesList.length; i++) {
+                var cookieList = cookiesList[i].split("=");
+                for (j = 0; j < cookieList.length; j++) {
+                    if (j % 2 == 0)
+                        opt += "<option value='" + cookieList[j] + "'>" + cookieList[j] + "</option>"
+                }
+            }
+            cookieSelect.innerHTML = opt
+        }
+
+        function getAllCookie(){
+            var cookiesList = document.cookie.split(";")
+            var opt = "<option disabled selected value=''>Choose</option>"
+            for (i = 0; i < cookiesList.length; i++) {
+                var cookieList = cookiesList[i].split("=");
+                for (j = 0; j < cookieList.length; j++) {
+                    if (j % 2 == 0)
+                        opt += "<option value='" + cookieList[j] + "'>" + cookieList[j] + "</option>"
+                }
+            }
+            cookieSelect.innerHTML = opt
+        }
+
+        function getCookie() {
+            var cookiesList = document.cookie.split(";")
+            var tbl = "<tr><th>Name</th><th>Value</th></tr>"
+            for (i = 0; i < cookiesList.length; i++) {
+                var cookieList = cookiesList[i].split("=");
+                for (j = 0; j < cookieList.length; j++) {
+                    if (j % 2 == 0)
+                    tbl += "<tr><td>" + cookieList[j] + "</td>"
+                        else
+                        tbl += "<td>" + cookieList[j] + "</td><tr>"
+                        }
+                    }
+                    var table = document.getElementById('table')
+                    table.innerHTML = tbl;
+                }
+        function setCookie() {
+                var cookieName = document.getElementById('cookie-name').value
+                var cookieValue = document.getElementById('cookie-value').value
+                if (cookieName == '' || cookieValue == '') {
+                    window.alert("Please enter cookie name and value")
+                    return
+                }
+                document.cookie = cookieName + "=" + cookieValue + ";"
+                document.getElementById('cookie-name').rese
+                getCookie()
+                document.getElementById('cookie-value').value = ""
+                document.getElementById('cookie-name').value = ""
+                getAllCookie()
+                sessionStorage.setItem(cookieName,cookieValue)
+            }
+            
+            function deleteCookie() {
+                if (cookieSelect.value == '') {
+                    window.alert("Please select a value")
+                    return
+                }
+                // var cookieName = document.getElementById('cookie-name').value
+                document.cookie = cookieSelect.value + "=" + "abc ;expires= Mon, 05 Dec 2022 12:00:00 UTC"
+                // sessionStorage.removeItem('cookieName')
+                sessionStorage.removeItem('p1')
+                sessionStorage.removeItem('p2')
+                // getAllCookie()
+            }
+            </script>
+</body>
+
+</html>

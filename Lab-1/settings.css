@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+:root {
+    --primary: #2087a7;
+    --secondary: #2087a7;
+    --light: #2087a7;
+    --complementory: #003bed;
+    --danger: #ed3b00;
+    --success: #00c500;
+    --background: #f4f4f4;
+}
+
+body {
+    background-color: var(--background);
+    font-family: 'Roboto', sans-serif;
+}
+
+.text-center {
+    text-align: center;
+    color: var(--primary);
+}
+
+
+@media (min-width:992px) {
+    .container {
+        margin-top: 5vh;
+        padding-left: 30vw;
+        padding-right: 30vw;
+    }
+
+    .form {
+        padding: 5vh 3vw 8vh 3vw;
+    }
+}
+
+@media (min-width:576px) and (max-width:991px) {
+    .container {
+        margin-top: 6vh;
+        padding-left: 20vw;
+        padding-right: 20vw;
+    }
+
+    .form {
+        padding: 5vh 5vw 6vh 3vw;
+
+    }
+}
+
+@media (max-width:575px) {
+    .container {
+        margin-top: 6vh;
+        padding-left: 3vw;
+        padding-right: 3vw;
+    }
+
+    .form {
+        padding: 5vh 7vw 8vh 3vw;
+    }
+}
+
+
+.form {
+    border: 1px solid #e3e3e3;
+    border-radius: 15px;
+    background-color: white;
+    margin-bottom: 4em;
+}
+
+.mt {
+    margin-top: 3vh;
+}
+
+input, select {
+    font-size: 1.2em;
+    width: 100%;
+    padding: 8px;
+    background-color: #003bed17;
+    border: 0;
+}
+
+label {
+    font-size: 1.1em;
+}
+
+
+input[type="submit"] {
+    background-color: var(--primary);
+    border: 0;
+    width: 103%;
+    padding: 8px;
+}
+
+input:focus,
+input:active,
+input::marker
+select:focus
+select:active {
+    outline-color: var(--primary);
+    outline-offset: 2px 5px 2px;
+}
+
+input[type="submit"]:hover {
+    background-color: var(--secondary);
+}
+
+input[type="submit"]:hover,
+input[type="submit"] {
+    color: black;
+}
+
+.imp,
+.helper {
+    color: var(--danger);
+}
+
+
+.check {
+    float: left;
+    align-items: flex-start;
+    width: min-content;
+    align-self: baseline;
+}
+
+.check,
+small {
+    margin-top: 4px;
+}
+
+.show {
+    border: 1px solid transparent;
+    display: flex;
+}
+
+.form {
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.form #settings {
+    position: absolute;
+    top: 1em;
+    right: 1em;
+}
+
+.form #back{
+    position: absolute;
+    top: 1em;
+    right: 1em;
+}
+
+#setting-form button{
+    background-color: var(--primary);
+    border: 0;
+    padding: 8px;
+    border-radius: 20px;
+    color: #f4f4f4;
+}
+#setting-form button:hover{
+    background-color: var(--secondary);
+}
