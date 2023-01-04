@@ -1,3 +1,6 @@
-{
-  "name":"MCA"
-}
+{"records":[ 
+{"id":101,"name":"Sam","phno":"7845196231"},
+{"id":117,"name":"John","phno":"9854761327"},
+{"id":120,"name":"Peter","phno":"68749513201"},
+{"id":103,"name":"Noel","phno":"9017658231"}
+]}
