@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pet Shop</title>
+
+    <!-- external css link  -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    
+    <!-- header starts -->
+
+    <header>
+        <img src="images/logo.png" class="logo">
+        <div class="navbar" id="navbar">
+        <ul class="nav-links">
+            <li><a href="dog.html">Dog</a></li>
+            <li><a href="petfoods.html">Accessories</a></li>
+            <li><a href="store.html">Stores</a></li>
+            <li><a href="abt.html">About Us</a></li>
+        </ul>
+        <a href="login.html" class="login-btn">Login</a>
+        
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <i class="fa fa-bars"></i>
+          </a>
+    </div>
+    </header>
+
+    <div class="banner"> 
+        <div class="main-title">
+            <h1>Let's Explore...</h1>
+            <h3>Planning a trip with pet? Don't forget about food. </h3>
+            <a href="petfoods.html"><button class="btn">Pet Foods</button></a>
+        </div>
+    </div>
+
+    <!-- header ends  -->
+
+    <!-- order form section starts  -->
+ 
+    
+
+    <div class="book-title"><h1>Search stores nearby</h1></div>
+
+    <section class="book-form">
+
+      <form action="">
+        <div class="inputBox">
+          <span>Where?</span>
+          <input type="text" placeholder="place name" value="">
+        </div>
+        <input type="submit" value="Find Now" class="btn-form">
+      </form>
+        
+    </section>
+    
+    <!-- order form section ends  -->
+
+
+
+
+    <!-- holiday package starts -->
+    <div class="holiday-packages" id="holiday">
+
+      <div class="title"><h1>Featured</h1></div>
+
+      <a href="petfoods.html">View More</a>
+      <div class="packages">
+      <div class="box">
+        <div class="image"><img src="https://m.media-amazon.com/images/I/7169GpTvmgL._AC_UL480_QL65_.jpg" alt=""></div>
+
+        <div class="pack-details">
+          <h2>BOLTZ Bird Food for Budgies</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+          <button class="book-btn">Order Now</button>
+        </div>
+      </div>
+
+      <div class="box">
+        <div class="image"><img src="https://m.media-amazon.com/images/I/5113UvOEj7L._AC_UL480_QL65_.jpg" alt=""></div>
+
+        <div class="pack-details">
+          <h2 class="pack-title">Senapati Dog Neck Collar Belts</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+          <button class="book-btn">Order Now</button>
+        </div>
+      </div>
+
+      <div class="box">
+        <div class="image"><img src="https://m.media-amazon.com/images/I/71dCkKohzoL._AC_UL480_QL65_.jpg" alt=""></div>
+
+        <div class="pack-details">
+          <h2 class="pack-title">Meat Up Stainless Steel Dog Feeding Bowl</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+          <button class="book-btn">Order Now</button>
+        </div>
+      </div>
+
+      <div class="box">
+        <div class="image"><img src="https://m.media-amazon.com/images/I/61654OyZMuS._AC_UL480_FMwebp_QL65_.jpg" alt=""></div>
+
+        <div class="pack-details">
+          <h2 class="pack-title">Tetra Bits Complete Fish Food</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+          <button class="book-btn">Order Now</button>
+        </div>
+      </div>
+
+      <div class="box">
+        <div class="image"><img src="https://m.media-amazon.com/images/I/716WunDd3pL._AC_UL480_FMwebp_QL65_.jpg" alt=""></div>
+
+        <div class="pack-details">
+          <h2 class="pack-title">Foodie Puppies Anti-Bacterial Pet Wet Wipes for Dogs</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+          <button class="book-btn">Order Now</button>
+        </div>
+      </div>
+    </div>
+    </div>
+  
+
+    <!-- holiday package ends  -->  
+
+
+    
+
+
+
+    <!-- hotels section starts  -->
+<!-- 
+    <section class="hotels" id="hotels">
+
+      <div class="box-container">
+        <div class="title"><h1>Book Hotels at lowest price</h1></div>
+        <div class="hotel-box">
+          <div class="image"><img src="https://imgcld.yatra.com/ytimages/image/upload/t_hotel_srplist/v1511426014/Hotel/Goa/00001793/4257079_Facade_Image_3lOBD5.jpg" alt=""></div>
+          <div class="content">
+            <h2>Riva Beach Resort</h2>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star-half"></i>
+            <br>
+
+            <div class="detail">
+            <i class="fas fa-map-marker-alt"></i> Mandrem, Goa
+            <div class="price"><span><i class="fas fa-rupee-sign"></i>16,200</span><i class="fas fa-rupee-sign"></i>8,600</div>
+          </div>
+
+          <button class="book-btn">Choose Room</button>
+          </div>
+        </div>
+
+        <div class="hotel-box">
+          <div class="image"><img src="https://imgcld.yatra.com/ytimages/image/upload/t_hotel_yatra_details_desktop/v1512635965/Hotel/Goa/00005781/1_Hotel_Facade_xtFdpB.jpg" alt=""></div>
+          <div class="content">
+            <h2>Country Inn</h2>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star-half"></i>
+            <br>
+
+            <div class="detail">
+            <i class="fas fa-map-marker-alt"></i> Candolim, Goa
+            <div class="price"><span><i class="fas fa-rupee-sign"></i>16,200</span><i class="fas fa-rupee-sign"></i>8,600</div>
+          </div>
+
+          <button class="book-btn">Choose Room</button>
+          </div>
+        </div>
+
+        <div class="hotel-box">
+          <div class="image"><img src="https://imgcld.yatra.com/ytimages/image/upload/t_hotel_srplist/v8023431689/Hotel/00005181/4U0A6743a15_czK8N5.jpg" alt=""></div>
+          <div class="content">
+            <h2>Golden Tulip</h2>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star-half"></i>
+            <br>
+
+            <div class="detail">
+            <i class="fas fa-map-marker-alt"></i> Candolim, Goa
+            <div class="price"><span><i class="fas fa-rupee-sign"></i>16,200</span><i class="fas fa-rupee-sign"></i>8,600</div>
+          </div>
+
+          <button class="book-btn">Choose Room</button>
+          </div>
+        </div>
+
+        <div class="hotel-box">
+          <div class="image"><img src="https://imgcld.yatra.com/ytimages/image/upload/t_hotel_srplist/v1544175652/Hotel/Goa/00141871/Restaurant-3_MSKbGa.jpg" alt=""></div>
+          <div class="content">
+            <h2>The Avenue Colgate</h2>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star-half"></i>
+            <br>
+
+            <div class="detail">
+            <i class="fas fa-map-marker-alt"></i> Mandrem, Goa
+            <div class="price"><span><i class="fas fa-rupee-sign"></i>16,200</span><i class="fas fa-rupee-sign"></i>8,600</div>
+          </div>
+
+          <button class="book-btn">Choose Room</button>
+          </div>
+        </div>
+
+
+
+      </div>
+    </section> -->
+
+    <!-- hotels section ends  -->
+
+
+
+
+    <!-- footer section starts here  -->
+
+    <footer>
+      <div class="abt" id="abt">
+      <h3>About Us</h3>
+
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+          Accusantium dolorum quos ipsa ex totam? Eum ipsam provident excepturi mollitia distinctio expedita 
+          inventore nemo minima quae.</p>
+    </div>
+
+    <div class="contact">
+      <h3>Contact Us</h3>
+      <i class="fas fa-phone-square-alt"></i> +91 85479 54763
+      <br>
+      <i class="fas fa-envelope"></i> abc@gmail.com
+    </div>
+
+    <div class="subscribe">
+      <h3>Subscribe Us</h3>
+      <input type="text" placeholder="Enter email address">
+      <input type="submit" value="Send" class="btn-form">
+    </div>
+
+    <div class="social">
+      <i class="fab fa-twitter-square"></i>
+      <i class="fab fa-facebook-square"></i>
+      <i class="fab fa-instagram-square"></i>
+      <i class="fab fa-youtube"></i>
+    </div>
+    </footer>
+
+    <!-- footer section ends here  -->
+
+
+
+
+
+
+
+
+
+
+
+      <!-- external js file  -->
+      <script type="text/javascript" src="js/script.js"></script>
+</body>
+</html>
