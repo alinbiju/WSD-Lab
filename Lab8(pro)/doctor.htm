@@ -1,0 +1,57 @@
+<nav class="navbar navbar-dark bg-dark navbar-expand-lg fixed-top">
+    <div class="container-fluid">
+        <a href="/" class="navbar-brand">
+            Distribution Management System
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarText">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link" href="#!hos">Products</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="#!doc">Suppliers</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#!pat">Users</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<div class="container">
+    <div class="position-absolute top-50 start-50 translate-middle w-75">
+        <div class="card p-5">
+            <div class="card-body display-5" id="content">
+                Suppliers
+            </div>
+            <div class="row justify-content-end g-0">
+                <div class="col-3">
+                    <input type="text" class="form-control" ng-model="src" placeholder="Search" id="srch" value="">
+                </div>
+                <div class="col-3">
+                    <select class="form-select" ng-model="selected">
+                        <option ng-repeat="x in keys" value="{{x}}">{{x|sentencecase}}</option>
+                    </select>
+                </div>
+            </div>
+            <table class="table table-dark table-hover table-bordered border-light p-5 my-5" id="table">
+                <tr>
+                    <th>ID</th>
+                    <th>Roman ID</th>
+                    <th>Name</th>
+                    <th>Product Type</th>
+
+                </tr>
+                <tr ng-repeat="x in Data | orderBy:'id' | jsonfilter : [selected,src]">
+                    <td>{{x.id}}</td>
+                    <td>{{x.id | roman}}</td>
+                    <td>{{x.name | sentencecase}}</td>
+                    <td class="{{x.type|color}}">{{x.type|uppercase}}</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>

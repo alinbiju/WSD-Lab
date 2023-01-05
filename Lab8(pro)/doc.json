@@ -1,0 +1,24 @@
+{
+  "doc": [
+    {
+      "id": "1",
+      "name": "Sam",
+      "type": "bone"
+    },
+    {
+      "id": "2",
+      "name": "ROHAN",
+      "type": "heart"
+    },
+    {
+      "id": "3",
+      "name": "RAHUL",
+      "type": "skin"
+    },
+    {
+      "id": "4",
+      "name": "ROHIT",
+      "type": "bone"
+    }
+  ]
+}

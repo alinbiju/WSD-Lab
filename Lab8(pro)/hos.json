@@ -1,0 +1,31 @@
+{
+  "hoslist": {
+    "hos": [
+      {
+        "id": "1",
+        "name": "Dog Food",
+        "location": "Ahmedabad"
+      },
+      {
+        "id": "2",
+        "name": "Cat Food",
+        "location": "Raipur"
+      },
+      {
+        "id": "3",
+        "name": "Fish Food",
+        "location": "Bengal"
+      },
+      {
+        "id": "4",
+        "name": "Dog Toys",
+        "location": "Bangalore"
+      },
+      {
+        "id": "5",
+        "name": "Cat tray",
+        "location": "Kerala"
+      }
+    ]
+  }
+}
